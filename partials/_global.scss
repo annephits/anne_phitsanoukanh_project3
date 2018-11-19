@@ -1,8 +1,15 @@
-body {
+html {
+    font-family: "Montserrat", sans-serif;
     font-size: 62.5%;
+    color: #454545;
+    margin: 0px;
+    padding: 0px;
+    background-color: #222;
+    text-align: center;
 }
 
-h1 {
-    color: red;
-    text-transform: uppercase;
+
+@mixin fontSize($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
 }

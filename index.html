@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>How Do You Like Your Eggs?!</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ask Me, I Know Stuff.</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+	<!-- favicon -->
+	<link type="image/png" href="assets/eight-ball-icon.png" rel="icon">
+
 </head>
 <body>
-    <h1>How do you like your eggs?</h1>
+
+
+		<header>
+			<h1 class= "animated swing">Ask Me, I Know Stuff.</h1>
+			<div class="button">
+				<button id="ask-button">Start Here</button>
+			</div>
+		</header>
+		
+		<main>
+			<video autoplay loop id="video-background" muted plays-inline>
+				<source src="https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/2198/5/135992580/402779389.mp4?token=1542640718-0x65ce126f86cadc53bee5a367329d5d4ae3c27b7d"
+				 type="video/mp4">
+			</video>
+			<div class="ball" onmouseover="PlaySound('my-sound')" onmouseout="StopSound('my-sound')">
+				<img id="8ball" src="assets/magicEightBall.png" alt ="A magic eight ball, otherwise a ball with an 8 in the middle of it.">
+				<p id="answer" class="answer">Answer goes here.</p>
+			</div>
+		
+			<audio id='my-sound' src="assets/lightSaber.mp3" />
+		</main>
+	
+<!-- JS -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
